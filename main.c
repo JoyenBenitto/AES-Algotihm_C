@@ -1,6 +1,6 @@
 
-//   Rijndael Algorithm         
-//
+//                                                 * Rijndael Algorithm *         
+//                                              ===========================
 //
 //              ___________________                 ____________________                  _________________ 
 //             |                   |               |                    |                |                 |
@@ -80,6 +80,59 @@
 //
 //_______________________________________________________________________________________________________________________________________________________________________
 //
+//                                                   Features of AES 
+//                                                 ===================
+//
+//  1) It uses Substitution and Permutations, also called SP Networks.
+//  2) A single key is expanded to be used in multiple rounds.
+//  3) AES performs on byte data, indtead of bit data.
+//  4) No. of rounds is dependent on the key length.
+//
+//                        128-bit Key Length    -------------> 10 rounds
+//                        192-bit Key Length    -------------> 12 rounds
+//                        256-bit Key Length    -------------> 14 rounds
+//
+//
+//_________________________________________________________________________________________________________________________________________________________________________
+//                                  
+//                                                 How AES Works ??
+//                                              =====================
+//
+//
+//                                                Manner of storage
+//                                             =======================
+//
+//      ____________________________________________   
+//     |          |          |          |           |
+//     |          |          |          |           |    -> Everything is stored in a 4X4 matrix format.
+//     |    B0    |    B4    |    B8    |    B12    |       (this matrix is also known as * state array *)
+//     |          |          |          |           |       we will be using this state array to transmit data from one 
+//     |__________|__________|__________|___________|       step to another and form one round to another.
+//     |          |          |          |           |    -> Each round takes stae array as input and give similar output
+//     |          |          |          |           |    -> 16-byte matrix, with each cell represnting one byte.
+//     |    B1    |    B5    |    B9    |    B13    |    -> 4-byte = 1 word, so each state array has 4 words. 
+//     |          |          |          |           |
+//     |__________|__________|__________|___________|
+//     |          |          |          |           |
+//     |          |          |          |           |
+//     |    B2    |    B6    |    B10   |    B14    |
+//     |          |          |          |           |
+//     |__________|__________|__________|___________|
+//     |          |          |          |           |
+//     |          |          |          |           |
+//     |    B3    |    B7    |    B11   |    B15    |
+//     |          |          |          |           |  
+//     |__________|__________|__________|___________|
+//
+//                                                  Key Expansion
+//                                               ===================
+//
+//
+//
+//
+//
+//
+
 
 #include <stdio.h>
 #include <math.h>
